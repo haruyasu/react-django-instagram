@@ -34,6 +34,8 @@ import {
     fetchAsyncGetPosts,
     fetchAsyncGetComments,
 } from "../post/postSlice"
+import Post from '../post/Post'
+import EditProfile from './EditProfile'
 
 const StyledBadge = withStyles((theme) => ({
     badge: {
@@ -91,10 +93,11 @@ const Core: React.FC = () => {
     return (
         <div>
             <Auth />
+            <EditProfile />
             <div className={styles.core_header}>
                 <h1 className={styles.core_title}>MyInsta</h1>
                 {profile?.nickName ? (
-                    <div>
+                    <>
                         <button
                             className={styles.core_btnModal}
                             onClick={() => {
@@ -136,7 +139,7 @@ const Core: React.FC = () => {
                                 </StyledBadge>
                             </button>
                         </div>
-                    </div>
+                    </>
                 ) : (
                         <div>
                             <Button
@@ -160,7 +163,7 @@ const Core: React.FC = () => {
             </div>
 
             {profile?.nickName && (
-                <div>
+                <>
                     <div className={styles.core_posts}>
                         <Grid container spacing={4}>
                             {posts
@@ -180,7 +183,7 @@ const Core: React.FC = () => {
                                 ))}
                         </Grid>
                     </div>
-                </div>
+                </>
             )}
         </div>
     )
