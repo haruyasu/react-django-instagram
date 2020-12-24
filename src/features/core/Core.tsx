@@ -9,7 +9,8 @@ import {
     Grid,
     Avatar,
     Badge,
-    CircularProgress
+    CircularProgress,
+    Container
 } from '@material-ui/core'
 import { MdAddAPhoto } from 'react-icons/md'
 import {
@@ -165,14 +166,14 @@ const Core: React.FC = () => {
             </div>
 
             {profile?.nickName && (
-                <>
+                <Container maxWidth='sm'>
                     <div className={styles.core_posts}>
                         <Grid container spacing={4}>
                             {posts
                                 .slice(0)
                                 .reverse()
                                 .map((post) => (
-                                    <Grid key={post.id} item xs={12} md={4}>
+                                    <Grid key={post.id} item xs={12} md={12}>
                                         <Post
                                             postId={post.id}
                                             title={post.title}
@@ -185,7 +186,7 @@ const Core: React.FC = () => {
                                 ))}
                         </Grid>
                     </div>
-                </>
+                </Container>
             )}
         </div>
     )

@@ -18,7 +18,7 @@
 
 .post_image {
     width: 100%;
-    height: 280px;
+    /* height: 280px; */
     object-fit: contain;
 }
 
@@ -50,6 +50,7 @@
 .post_commentBox {
     display: flex;
     margin-top: 10px;
+    height: 60px;
 }
 
 .post_input {
@@ -60,9 +61,11 @@
 }
 
 .post_button {
-    flex: 0;
+    /* flex: 0; */
     border: none;
-    color: #4682b4;
+    color: #B3DFFC;
+    font-weight: bold;
+    font-size: 0.9em;
     background-color: transparent;
     border-top: 1px solid lightgray;
     cursor: pointer;

@@ -3,7 +3,8 @@ import { RootState } from '../../app/store'
 import axios from 'axios'
 import {PROPS_AUTHEN, PROPS_PROFILE, PROPS_NICKNAME } from '../types'
 
-const apiUrl = process.env.REACT_APP_DEV_API_URL
+// const apiUrl = process.env.REACT_APP_DEV_API_URL
+const apiUrl = 'https://djangostartup.work/'
 
 export const fetchAsyncLogin = createAsyncThunk('auth/post', async (authen: PROPS_AUTHEN) => {
     const res = await axios.post(`${apiUrl}authen/jwt/create`, authen, {

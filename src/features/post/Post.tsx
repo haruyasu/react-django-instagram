@@ -126,7 +126,7 @@ const Post: React.FC<PROPS_POST> = ({
                     <input
                         className={styles.post_input}
                         type='text'
-                        placeholder='コメント'
+                        placeholder='コメントを追加...'
                         value={text}
                         onChange={(e) => setText(e.target.value)}
                     />
@@ -136,7 +136,7 @@ const Post: React.FC<PROPS_POST> = ({
                         type='submit'
                         onClick={postComment}
                     >
-                        Post
+                        投稿する
                     </button>
                 </form>
             </div>

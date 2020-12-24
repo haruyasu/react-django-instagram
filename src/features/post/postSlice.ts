@@ -3,8 +3,10 @@ import { RootState } from '../../app/store'
 import axios from 'axios'
 import { PROPS_NEWPOST, PROPS_LIKED, PROPS_COMMENT } from '../types'
 
-const apiUrlPost = `${process.env.REACT_APP_DEV_API_URL}api/post/`
-const apiUrlComment = `${process.env.REACT_APP_DEV_API_URL}api/comment/`
+// const apiUrlPost = `${process.env.REACT_APP_DEV_API_URL}api/post/`
+// const apiUrlComment = `${process.env.REACT_APP_DEV_API_URL}api/comment/`
+const apiUrlPost = 'https://djangostartup.work/api/post/'
+const apiUrlComment = 'https://djangostartup.work/api/comment/'
 
 export const fetchAsyncGetPosts = createAsyncThunk('post/get', async () => {
     const res = await axios.get(apiUrlPost, {
